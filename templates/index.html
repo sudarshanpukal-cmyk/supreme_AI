@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SUPREME AI</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <main class="app">
+    <header>
+      <div class="orb">S</div>
+      <div>
+        <h1>SUPREME AI</h1>
+        <p>Local assistant · Text + Voice · Windows control</p>
+      </div>
+      <span id="status" class="status">Ready</span>
+    </header>
+
+    <section id="chat" class="chat" aria-live="polite">
+      <div class="bubble assistant">Hello! I am SUPREME AI. Type a message or press the microphone. Try “open notepad”.</div>
+    </section>
+
+    <section class="composer">
+      <textarea id="message" rows="2" placeholder="Ask SUPREME AI anything..."></textarea>
+      <div class="actions">
+       <button id="micBtn" class="secondary" type="button"> 🎙 Enable Hey Supreme</button>
+        <button id="sendBtn" type="button">Send ➤</button>
+      </div>
+      <label class="toggle"><input id="speakToggle" type="checkbox" checked> Speak replies aloud</label>
+      <p class="hint">Click Enable Hey Supreme, allow microphone access, and say "Hey Supreme" followed by your command.</p>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>
